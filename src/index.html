@@ -67,18 +67,29 @@
                     "ayer ",
                     "cuando lo dejé encima de la mesa "
                   ];
-
-                  let respuesta2 = Math.floor(Math.random() * who.length);
-                  let respuesta3 = Math.floor(Math.random() * action.length);
-                  let respuesta4 = Math.floor(Math.random() * what.length);
-                  let respuesta5 = Math.floor(Math.random() * when.length);
-
+                  function generaRespuesta(array) {
+                    let respuesta =
+                      array[Math.floor(Math.random() * array.length)];
+                    return respuesta;
+                  }
                   document.querySelector("#excuse").innerHTML =
                     first +
-                    who[respuesta2] +
-                    action[respuesta3] +
-                    what[respuesta4] +
-                    when[respuesta5];
+                    generaRespuesta(who) +
+                    generaRespuesta(action) +
+                    generaRespuesta(what) +
+                    generaRespuesta(when);
+
+                  // let respuesta2 = Math.floor(Math.random() * who.length);
+                  // let respuesta3 = Math.floor(Math.random() * action.length);
+                  // let respuesta4 = Math.floor(Math.random() * what.length);
+                  // let respuesta5 = Math.floor(Math.random() * when.length);
+
+                  // document.querySelector("#excuse").innerHTML =
+                  //   first +
+                  //   who[respuesta2] +
+                  //   action[respuesta3] +
+                  //   what[respuesta4] +
+                  //   when[respuesta5];
                 };
               </script>
             </div>
